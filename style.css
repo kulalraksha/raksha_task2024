@@ -1,0 +1,377 @@
+*{
+    font-family: sans-serif;
+    text-decoration: none;
+}
+.bgbody{
+    margin: 0px;
+    padding: 20px;
+    background-image: url('img/background-img.jpg');
+    background-position: 50%;
+    background-size: cover;
+    background-attachment: fixed;
+    position: fixed;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    opacity: 1;
+}
+h1{
+  z-index: 2;
+}
+
+.hearder input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    cursor: pointer;
+    /* opacity: 0; hide this */
+    /* z-index: 2; and place it over the hamburger */
+    /* -webkit-touch-callout: none; */
+  }
+  
+  .hearder input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    cursor: pointer;
+    opacity: 0; /* hide this */
+    z-index: 2; /* and place it over the hamburger */
+    -webkit-touch-callout: none;
+  }
+  span {
+    position: relative;
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: black;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+    &:first-child {
+      transform-origin: 0% 0%;
+    }
+    &:nth-last-child(2) {
+      transform-origin: 0% 100%;
+    }
+  }
+
+
+
+ .hearder input {
+    &:checked ~ span {
+      opacity: 1;
+      transform: rotate(45deg) translate(-2px, -1px);
+      background: white;
+      &:nth-last-child(3) {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.2, 0.2);
+      }
+      &:nth-last-child(2) {
+        transform: rotate(-45deg) translate(0, -1px);
+      }
+    }
+    &:checked ~ .menuItem {
+      transform: none;
+    }
+  }
+
+
+.menuItem {
+  position: absolute;
+  width: 250px;
+  height: 100vh;
+  padding: 50px;
+  padding-top: 125px;
+  background: black;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  li {
+    padding: 10px 0;
+    font-size: 22px;
+    
+  }
+}
+.menu--right {
+  
+    position: fixed;
+    right: 0;
+    input {
+      right: 5em;
+    }
+    span {
+      right: 5em;
+    }
+  }
+  .menuItem {
+    right: 0;
+    margin: -100px 0 0 0;
+    transform: translate(100%, 0);
+    li {
+      a {
+        &:hover {
+          padding-left: 5px;
+        }
+      }
+    }
+  }
+  menuItem li a{
+    color: white;
+  }
+.hearder{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 90%;
+}
+.hearder p{
+  z-index: 1;
+  font-size: 30px;
+  padding-left: 5rem;
+}
+hr{
+  z-index: 10;
+  height: 2px;
+  background-color: black;
+  width:90%;
+}
+.firstsec{
+    display: flex;
+    flex-direction: column;
+    height: 40vh;
+    align-items: stretch;
+    padding-left: 60px;
+    justify-content: center;
+    margin-top: 10em ;
+    z-index: 1;
+}
+.firstsec h1{
+  font-size: 98px;
+  font-weight: 500;
+  margin: 0px 1em;
+}
+.righth1{
+  text-align: right;
+}
+.stickysec{
+  display: flex;
+  flex-direction: row;
+  margin: 0em 4em;
+  z-index: 1;
+}
+.container{
+  width: 30%;
+  border-right: 1px solid black;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  z-index: 2;
+}
+.container div{
+  position: sticky;
+  top: 60px;
+  margin-bottom: 20px;
+}
+.container h2{
+  font-family: Roboto;
+  font-size: 35px;
+  font-weight: 500;
+  margin-right: 10px;
+  margin-bottom: 30px;
+  z-index: 1;
+}
+.container h3{
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 600;
+}
+.container form{
+  border: 1px solid black;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 5px;
+}
+input[type=email]{
+  padding: 20px;
+  background-color: transparent;
+  color: black;
+  border: none;
+  font-size: 20px;
+  width: 70%;
+  border-right: 1px solid black;
+}
+input[type=email]::placeholder {
+  color: black;
+}
+input[type=submit]{
+  background-color: transparent;
+  border: none;
+  width: 20%;
+  background-image: url(img/5f2b2397eedb569df7a47edf_Arrow\ Icon-5.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+.container2{
+  width: 70%;
+  /* padding: 90px 0px 20px 0px ; */
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  z-index: 2;
+}
+.box{
+  padding: 90px 0px 0px 40px;
+  border-bottom: 1px solid black;
+}
+.box h2{
+  font-size: 55px;
+  font-family: Roboto;
+  font-weight: 500;
+}
+.btnimg{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid black;
+  padding: 10px;
+  border-bottom: none;
+}
+.btnimg button{
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+}
+.btnimg img:hover{
+  transition: 0.3s;
+  transform: translate(10px, 0);
+}
+.service{
+  margin-left: 40px;
+  border: 1px solid black;
+  border-top: none;
+  padding: 20px 20px 5px 20px;
+  font-size: 16px;
+}
+.testimonial{
+  padding: 0px;
+  border-bottom: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0px;
+  padding-bottom: 20px;
+}
+ .testimonial > h2{
+  font-size: 30px;
+  text-align: center;
+  padding: 30px;
+}
+.box > h3{
+  font-size: 35px;
+  margin-top: -30px;
+}
+.testimonial > p{
+  margin: 0px;
+}
+footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 7em 5em 2em 5em;
+}
+footer > img{
+  width: 100%;
+  z-index: 2;
+}
+.footdiv{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.footdiv > div{
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.footdiv > div > a{
+  color: black;
+  text-decoration: underline;
+  font-size: 16px;
+  z-index: 2;
+}
+
+@media only screen and (max-width: 600px) {
+  body{
+    /* position: fixed; */
+    padding: 0px;
+  }
+  .hearder > p{
+    padding-left: 1em;
+  }
+  .menu--right{
+    input{
+      right: 1em;
+    }
+    span{
+      right: 1em;
+    }
+  }
+  .stickysec{
+    flex-direction: column;
+    margin: 0em 1em;
+  }
+  .firstsec{
+    height: 70vh;
+    margin-top: 0em;
+    padding: 10px;
+  }
+  .firstsec> h1{
+    margin: 0em;
+    font-size: 50px;
+  }
+  .container{
+    width: 100%;
+    border: none;
+  }
+  .container2{
+    width: 100%;
+    border: 1px solid black;
+  }
+  .box{
+    padding: 0px;
+  }
+  .box h2{
+    font-size: 20px;
+    padding: 0px 20px;
+  }
+  .box > h3 {
+    font-size: 20px;
+    margin-top: -10px;
+    padding: 0px 20px;
+  }
+.testimonial > h2 {
+  font-size: 20px;
+}
+.footdiv{
+  justify-content: center;
+  flex-direction: column;
+}
+footer{
+  padding: 7em 1em 1em 1em;
+}
+}
